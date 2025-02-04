@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { JSX, memo } from "react";
 
 const H1 = createMemoizedComponent('h1', 'scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl');
 
@@ -8,7 +8,7 @@ const P = createMemoizedComponent('p', 'leading-7 [&:not(:first-child)]:mt-6');
 
 const UL = createMemoizedComponent('ul', 'my-6 ml-6 list-disc [&>li]:mt-2');
 
-const CODE = createMemoizedComponent('code', 'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold');
+// const CODE = createMemoizedComponent('code', 'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold');
 
 export const MDX_COMPONENTS = {
     h1: H1(),

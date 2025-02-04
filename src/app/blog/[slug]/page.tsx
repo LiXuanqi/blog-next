@@ -2,7 +2,6 @@ import { MDX_COMPONENTS } from '@/components/mdx-components'
 import { allPosts } from 'contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer2/hooks'
 import { notFound } from 'next/navigation'
-import { memo } from 'react'
 
 
 export async function generateStaticParams() {
@@ -11,7 +10,8 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page(props: { params: Promise<{ slug: string }> })  {
+  const params = await props.params
   // Find the post for the current page.
   const post = allPosts.find((post) => post.slug === params.slug)
 
