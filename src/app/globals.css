@@ -70,3 +70,38 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+.a4-page {
+  width: 210mm;
+  min-height: 297mm;
+  /* padding: 20mm; */
+  margin: 0 auto;
+  background: white;
+}
+
+@media screen {
+  .a4-page {
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    /* margin: 1cm auto; */
+  }
+}
+
+@media print {
+  .a4-page {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+}
+

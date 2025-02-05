@@ -83,43 +83,6 @@ const ResumeSkillRow = ({
   );
 };
 
-const resume1 = {
-  name: "Your Name",
-  address: "Your Address",
-  tel: "Your Phone",
-  email: "your.email@example.com",
-  github: "github.com/yourusername",
-  linkedin: "linkedin.com/in/yourusername",
-  blog: "yourblog.com",
-  education: [
-    {
-      name: "University Name",
-      time: "20XX - 20XX",
-      desc: ["Degree Details"]
-    }
-  ],
-  skills: {
-    "Programming Languages": ["JavaScript", "TypeScript", "Python"],
-    "Frameworks": ["React", "Next.js", "Node.js"],
-    "Tools": ["Git", "Docker", "AWS"]
-  },
-  work_experience: [
-    {
-      company: "Company Name",
-      position: "Position Title",
-      time: "Month YYYY - Present",
-      location: "City, Country",
-      desc: ["Achievement 1", "Achievement 2"]
-    }
-  ],
-  projects: [
-    {
-      name: "Project Name",
-      desc: ["Project description and achievements"]
-    }
-  ]
-};
-
 export default function ResumePage() {
   return (
     <div className="bg-white min-h-screen">
@@ -153,7 +116,7 @@ export default function ResumePage() {
             ))}
           </ResumeSection>
 
-          <ResumeSection title="Skills">
+          {/* <ResumeSection title="Skills">
             {Object.entries(resume1.skills).map(([category, items]) => (
               <ResumeSkillRow
                 key={category}
@@ -161,7 +124,7 @@ export default function ResumePage() {
                 items={items}
               />
             ))}
-          </ResumeSection>
+          </ResumeSection> */}
 
           <ResumeSection title="Work Experience">
             {resume.workExperience.map((job, index) => (

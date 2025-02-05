@@ -9,10 +9,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <div>
-
-      {children}
-
-    </div>
+    <body>
+      <div className="min-h-screen bg-gray-100 py-8 print:bg-white print:py-0">
+        <div className="mx-auto max-w-[210mm] bg-white shadow-lg print:shadow-none">
+          <div className="a4-page">
+            {children}
+          </div>
+        </div>
+      </div>
+    </body>
   )
 }
